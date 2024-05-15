@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key JUNGLE</title>
+    <link rel="stylesheet" href="HOME PAGE.CSS">
+</head>
+<body>
+<!--NAVIGATION-->
+    <header>
+        <h2 class="logo">KEY JUNGLE</h2>
+        <nav class="navigation">
+            <a href="#about1">About</a>
+            <a href="#Reviews-">Reviews</a>
+            <a href="1webpage.html" classs="active">Keyboards</a>
+            <a href="#contact">Contact</a>
+            <a href="Login.html" style="color:white; background-color: #359381;">Login</a>
+        </nav>
+    </header>
+<!--PARALLAX-->
+    <section class="parallax">
+        
+        <img src="hill1.png" id="hill1">
+        <img src="hill2.png" id="hill2">
+        <img src="hill3.png" id="hill3">
+        <img src="hill4.png" id="hill4">
+        <img src="hill5.png" id="hill5">
+        <img src="tree.png" id="tree">
+        <h2 id="text">KEYBOARD JUNGLE</h2>
+        <img src="leaf.png" id="leaf">
+        <img src="plant.png" id="plant">
+    </section>
+<!--ABOUT US-->
+    <section id="about-sec">
+        <div id="about">
+            <div id="about1"></div>
+            <div class='info-holder'>
+                <h2>WELCOME TO, <br>
+                     KEYBOARD JUNGLE</h2>
+                <p1>
+                here you can find different kinds of keyboards that will save you from key-logging softwares, so that you can type in your sensitive details wihtout thinking twice.</p1><br>
+                <button style="cursor: pointer;" onclick="window.open('1webpage.html')">START TYPING</button>
+            </div>
+            <div class="img-holder">
+                <img src="logo.png" id="logo">
+            </div>
+        </div>
+<!--Features-->
+        <section id="features">
+            
+        </section>
+<!--RAVIEW-->
+        <section id="Reviews-">
+            <h1 style="color:white; font-size:  40px; padding:10px;">Listen From Our Users</h1>
+            <div id="Reviews">
+                <div class="review-holder">
+                    <img src="user.png">
+                    <h1>Daniel</h1>
+                    <p>I've been using this virtual keyboard for a few weeks now, and it's been a game-changer! The customization options are fantastic, allowing me to tailor the layout to my preferences. Overall, a must-try for anyone looking for a reliable virtual keyboard.</p>
+                </div>
+                <div class="review-holder">
+                    <img src="user1.png">
+                    <h1>Harry</h1>
+                    <p>Impressive virtual keyboard with a sleek design and responsive interface. I appreciate the variety of themes available to personalize my typing experience. Nonetheless, it's a solid choice for daily use.</p>
+                </div>
+                <div class="review-holder">
+                    <img src="user2.png">
+                    <h2>Shawn</h2>
+                    <p>As a gamer, I need a virtual keyboard that doesn't lag during intense gaming sessions. This keyboard delivers on performance! The low latency and customizable key layouts are perfect for my needs. The gaming theme is a nice touch. I highly recommend it to fellow gamers.</p>
+                </div>
+                <div class="review-holder">
+                    <img src="user3.png">
+                    <h1>Brian</h1>
+                    <p>Great virtual keyboard for business use. The security features, like the option to hide sensitive information during input, are a welcome addition. A reliable choice for professionals.
+                    </p>
+                </div>
+            </div>
+        </section>
+<!--CONTACT US-->
+        <section id="contact">
+            <div id="contact_"></div>
+            <div class="contact_heading"><h1 style="font-size: 50px;">Contact Us</h1></div>
+            <div class="contact_info">
+                <p>If you have any questions or need assistance, feel free to reach out to our customer support team.</p>
+                <p>Email: <a href="mailto:support@keyhome.com">support@keyhome.com</a></p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+            <div class="contact_form">
+                <h2>Send us a message</h2>
+                <form id="contactForm" onsubmit="showAlert(event)">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+        
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+                    <button type="submit">
+                        SUBMIT
+                    </button>
+                </form>
+                <div id="thankYouMessage" style="display: none; font-size: larger;padding: 1rem; color: white;">
+                    Thank you for your suggestion!
+                </div>
+            </div>
+        </section>
+    </section>
+    <script>
+        let text = document.getElementById('text');
+        let leaf = document.getElementById('leaf');
+        let hill1 = document.getElementById('hill1');
+        let hill4 = document.getElementById('hill4');
+        let hill5 = document.getElementById('hill5');
+        
+        window.addEventListener('scroll', () => { 
+            let value = window.scrollY; // Corrected the typo here (changed 'scrolly' to 'scrollY')
+            text.style.marginTop = value * 2.5 + 'px';
+        });
+        </script>
+        
+</body>
+</html> 

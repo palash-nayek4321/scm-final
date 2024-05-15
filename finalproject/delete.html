@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        /* Categories Section Styles */
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            width: 200px;
+            background-color: #fff;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+        }
+
+        /* Catalog Section Styles */
+        .catalog {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .catalog-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .catalog-item img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .catalog-item h3 {
+            padding: 15px;
+            margin: 0;
+        }
+
+        .catalog-item p {
+            padding: 0 15px 15px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Categories</h2>
+        <div class="categories">
+            <div class="category">Category 1</div>
+            <div class="category">Category 2</div>
+            <div class="category">Category 3</div>
+            <!-- Add more categories as needed -->
+        </div>
+    </section>
+
+    <section>
+        <h2>Catalog</h2>
+        <div class="catalog">
+            <div class="catalog-item">
+                <img src="image1.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Description of Product 1.</p>
+            </div>
+            <div class="catalog-item">
+                <img src="image2.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Description of Product 2.</p>
+            </div>
+            <!-- Add more catalog items as needed -->
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,301 @@
+/*general*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif ;
+}
+
+html
+{
+    scroll-behavior: smooth;
+    scroll-padding: 5rem;
+    transition: all 100s ease-in-out;
+}
+
+
+body{
+    max-height: 100vh;
+    background: white;
+    overflow-x: hidden;
+    overflow-y:scroll;
+    cursor: default;
+}
+
+header{
+    position:absolute;
+    width:100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 180;
+    gap: 18.5vh;
+}
+
+.logo{
+    font-size: 1.6rem;
+    color:#359381;
+    pointer-events: none;
+}
+
+.navigation a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #359381;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 15px;
+    font-weight: 600;
+}
+
+.navigation a:hover, .navigation a:active{
+    background: #359381;
+    color:white;
+}
+
+
+.parallax{
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-bottom: 18vh;
+}
+
+
+
+#text{
+    z-index: 120;
+    margin-top:10vh;
+    font-size: 5rem;
+    color:#ffffff;
+    text-shadow: 6px  6px 4px rgba(0, 0, 0, .2);
+}
+
+#plant{
+    z-index: 140;
+}
+
+#spider{
+    z-index: 150;
+    width:13%;
+    
+}
+
+.parallax img{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    pointer-events: none;
+}
+
+#about-sec{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    position: relative;
+    background:linear-gradient(to bottom,#003329, #000000);
+    z-index: 130;
+    height: max-content;
+}
+
+#about{
+    margin-left: 6rem;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.info-holder h2{
+    margin-top: 6rem;
+    font-size: 4rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fff;
+    margin-bottom: 2rem;
+    z-index: 120;
+}
+
+
+.info-holder p1{
+    z-index: 130;
+    font-size: 20px;
+    color:#fff;
+}
+
+.info-holder button{
+    margin-top:2rem;
+    padding:0.5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    border:2px solid #0fda9b;
+}
+
+.info-holder button:hover{
+    border: 3px solid #0fda9a;
+}
+
+.info-holder button:active{
+    border-color: black;
+}
+
+.info-holder{
+    height: max-content;
+    width: 600px;
+}
+
+.img-holder{
+    width: 700px;
+    align-items: center;
+}
+
+#logo{
+    margin-right:3rem;
+    margin-left: 2rem;
+    margin-bottom:7rem;
+    width:100%;
+    z-index: 140;
+}
+ 
+
+/*reviews*/
+
+#Reviews-{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Reviews{
+    padding: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    gap: 5rem;
+    justify-content: space-evenly;
+}
+
+#Reviews img{
+    border: 1px solid white;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 3rem;
+    width:35.6vh;
+    height:40vh;
+}
+
+.review-holder{
+    border:2px solid #ffffff;
+    border-top-right-radius: 1rem;
+    background-color: none;
+    width: 36vh;
+    height: 64vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color:#ffffff;
+    overflow-x: scroll;
+}
+
+.review-holder p{
+    background-color: none;
+    padding-top: 1rem;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    position: relative;
+    bottom:1rem;
+    border: hidden;
+    border-top-right-radius: 1.3rem;
+}
+
+/*contact*/
+#contact {
+    /* padding: 50px 0; */
+    text-align: center;
+    align-items: center;
+    height: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.contact_heading {
+    color:white;
+    margin-bottom: 30px;
+}
+
+.contact_info {
+    color:white;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact_info a:hover{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 4vh;
+    padding: 20px;
+    border:2px solid rgb(125, 123, 123);
+    border-radius: 8px;
+    /* box-shadow: 2px 2px 5px rgba(0, 0, 0); */
+    align-items: center;
+    align-content: center;
+}
+
+.contact_form h2 {
+    margin-bottom: 20px;
+    color:white;
+}
+
+.contact_form label {
+    color:white;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact_form input[type="text"],
+.contact_form input[type="email"],
+.contact_form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact_form button {
+    background: linear-gradient(to right, rgb(55, 173, 216),rgb(193, 28, 182));
+    color: rgb(5, 5, 5);
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight:300;
+    transition: background-color 0.3s ease;
+}
+
+.contact_form button:hover {
+    color: #d6dfd6;
+}
+
+.contact_form button:active{
+    width:27%;
+}

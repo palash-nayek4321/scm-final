@@ -1,0 +1,34 @@
+let text = document.getElementById('text');
+let leaf = document.getElementById('leaf');
+let hill1 = document.getElementById('hill1');
+let hill4 = document.getElementById('hill4');
+let hill5 = document.getElementById('hill5');
+let spider=document.getElementById('spider')
+
+window.addEventListener('scroll', () =>{
+    let MAX_SCROLL_VALUE=920;
+    let SCROLL_VALUE=3100;
+    let value = window.scrollY;
+    spider.style.top = value+ 'px'
+    text.style.marginTop = value * 10.5 + 'px';
+    leaf.style.top = value * -1.5 + 'px';
+    leaf.style.left= value * 1.5 + 'px';
+    hill5.style.left= value * 1.5 + 'px';
+    hill4.style.left= value * -1.5 + 'px';
+    hill1.style.top= value * 1 + 'px';
+
+    let adjustedValue = Math.min(value * 2, MAX_SCROLL_VALUE);
+    hill1.style.top = adjustedValue + 'px';
+    text.style.marginTop=adjustedValue + 'px';
+
+    let adjustedValue2 =Math.min(value*-0.7, SCROLL_VALUE);
+    spider.style.top=adjustedValue2 + 'px'
+
+})
+
+function showAlert(event) {
+    event.preventDefault();
+    alert("Suggestion Submitted!");
+    document.getElementById('contactForm').reset();
+    document.getElementById('thankYouMessage').style.display = 'block';
+}

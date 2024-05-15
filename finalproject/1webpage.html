@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboards</title>
+    <link rel="stylesheet" href="1webpage.css">
+    <script>
+        function showAlert(event) {
+            event.preventDefault();
+            alert("Suggestion Submitted!");
+            document.getElementById('contactForm').reset();
+            document.getElementById('thankYouMessage').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    
+    
+    <section> <!--NAVIGATION-->
+        <header>
+            <h2 class="logo">KEY JUNGLE</h2>
+            <nav class="navigation">
+               
+                <a href="HOME PAGE.HTML" classs="active">Home</a>
+                <a href="#contact">Contact</a>
+                <a href="Login.html" style="color:white; background-color: #359381;">Login</a>
+            </nav>
+        </header></section>
+   
+    <section id="catalog">
+        <div style="display: flex; flex-direction: column; align-items: center;"><h1 id="heading">CATEGORIES</h1>
+        </div>
+        <div class="card">
+            <div class="cards">
+                <div class="title">
+                    <h1>NEW ARRIVALS</h1>
+                </div>
+                <div class="description">
+                    <p>Latest keyboard designs and features</p>
+                    <button onclick=location.href='#new_arrival'>USE</button>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="title">
+                    <h1>BASIC</h1>
+                </div>
+                <div class="description">
+                    <p>Minimalistic design with awsome colors</p>
+                    <button onclick="location.href='#basic'">USE</button>
+                </div>
+            </div>    
+            <div class="cards">
+                <div class="title">
+                    <h1>BACKLIT</h1>
+                </div>
+                <div class="description">
+                    <p>choose your favourite lights</p>
+                    <button onclick=location.href='#BACKLIT'>USE</button>
+                </div>
+            </div>   
+            <div class="cards">
+                <div class="title">
+                    <h1>CUSTOM</h1>
+                </div>
+                <div class="description">
+                    <p>Customize the way you want</p>
+                    <button onclick="location.href='#Custom'">USE</button>
+                </div>
+            </div>   
+              
+        </div>
+    </section>
+    <section id="option">
+        <div id="new_arrival"></div>
+        <div class="heading_holder"><h1>NEW ARRIVALS</h1></div>
+        <div class="scrollbar_track">
+            <img src="key5.png" class="keymenu" onclick="window.open('key5.png')">
+            <img src="basic1.png" class="keymenu" onclick="window.open('basic1.png')">
+            <img src="custom1.png" class="keymenu" onclick="window.open('custom1.png')">
+           
+            
+            
+        </div>
+        <div id="BACKLIT"></div>
+        <div class="heading_holder"><h1>BACKLIT</h1></div>
+        <div class="scrollbar_track">
+            <img src="key1.png" class="keymenu" onclick="window.open('vanshkey1.html')">
+            <img src="key2.png" class="keymenu" onclick="window.open('vanshkey2.html')">
+            <img src="key3.png" class="keymenu" onclick="window.open('vanshkey3.html')">
+            <img src="key4.png" class="keymenu" onclick="window.open('vanshkey4.html')">
+            <img src="key5.png" class="keymenu" onclick="window.open('vanshkey5.html')">
+            <img src="backlit1.png" class="keymenu" onclick="window.open('backlit1andnew.html')">
+            <img src="backlit2.png" class="keymenu" onclick="window.open('backlit2.html')">
+        </div>
+        <div id="basic"></div>
+        <div class="heading_holder"><h1>BASIC</h1></div>
+        <div class="scrollbar_track">
+            <img src="basic1.png" class="keymenu" onclick="window.open('basic1.html')">
+            <img src="basic2.png" class="keymenu" onclick="window.open('basic2.html')">
+            <img src="basic3.png" class="keymenu" onclick="window.open('basic3.html')">
+            <img src="basic4.png" class="keymenu" onclick="window.open('basic4.html')">
+            <img src="basic5andnew.png" class="keymenu" onclick="window.open('basic5.html')">
+            <img src="basic6.png" class="keymenu" onclick="window.open('basic6.html')">
+        </div>
+        <div id="Custom"></div>
+        <div class="heading_holder"><h1>CUSTOM</h1></div>
+        <div class="scrollbar_track">
+            <img src="custom1.png" class="keymenu" onclick="window.open('custom1.html')">
+            <img src="custom2.png" class="keymenu" onclick="window.open('00mainkeyboard.html')">
+        </div>
+    </section>
+    
+</body>
+</html>

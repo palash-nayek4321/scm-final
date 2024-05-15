@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIRTUAL KEYBOARD</title>
+    <link rel="stylesheet" href="vanshkey2.css">
+</head>
+<body>
+    <textarea class="text" id="output" placeholder="Type here..."></textarea>
+    <div class="keyboard" id="keyboardDiv">
+        <div class="row">
+            <button class="button" onclick="function_('`')">`~</button>
+            <button class="button" onclick="function_('1')">1 !</button>
+            <button class="button" onclick="function_('2')">2 @</button>
+            <button class="button" onclick="function_('3')">3 #</button>
+            <button class="button" onclick="function_('4')">4 $</button>
+            <button class="button" onclick="function_('5')">5 %</button>
+            <button class="button" onclick="function_('6')">6 ^</button>
+            <button class="button" onclick="function_('7')">7 &</button>
+            <button class="button" onclick="function_('8')">8 *</button>
+            <button class="button" onclick="function_('9')">9 (</button>
+            <button class="button" onclick="function_('0')">0 )</button>
+            <button class="button" onclick="function_('-')">-_</button>
+            <button class="button" onclick="function_('=')">=+</button>
+            <button class="button" onclick="delete_()" id="del">DELETE</button>
+        </div>
+        <div class="row">
+            <button class="button" onclick="function_('    ')" id="tab">TAB</button>
+            <button class="button" onclick="function_('q')">q</button>
+            <button class="button" onclick="function_('w')">w</button>
+            <button class="button" onclick="function_('e')">e</button>
+            <button class="button" onclick="function_('r')">r</button>
+            <button class="button" onclick="function_('t')">t</button>
+            <button class="button" onclick="function_('y')">y</button>
+            <button class="button" onclick="function_('u')">u</button>
+            <button class="button" onclick="function_('i')">i</button>
+            <button class="button" onclick="function_('o')">o</button>
+            <button class="button" onclick="function_('p')">p</button>
+            <button class="button" onclick="function_('[')">[ {</button>
+            <button class="button" onclick="function_(']')">] }</button>
+            <button class="button" onclick="function_('\\')">\ |</button>
+            
+        </div>
+        <div class="row">
+            <button class="button" onclick="caps_()" id="cap">CAPS LOCK</button>
+            <button class="button" onclick="function_('a')">a</button>
+            <button class="button" onclick="function_('s')">s</button>
+            <button class="button" onclick="function_('d')">d</button>
+            <button class="button" onclick="function_('f')">f</button>
+            <button class="button" onclick="function_('g')">g</button>
+            <button class="button" onclick="function_('h')">h</button>
+            <button class="button" onclick="function_('j')">j</button>
+            <button class="button" onclick="function_('k')">k</button>
+            <button class="button" onclick="function_('l')">l</button>
+            <button class="button" onclick="function_(';')">; :</button>
+            <button class="button" onclick="function_('\'')">" '</button>
+            <button class="button" onclick="handleEnterKey()" id="enterkey">ENTER</button>
+        </div>
+        <div class="row" id="row4">
+            <button class="button" onclick="shift_()" id="shift">SHIFT</button>
+            <button class="button" onclick="function_('z')">z</button>
+            <button class="button" onclick="function_('x')">x</button>
+            <button class="button" onclick="function_('c')">c</button>
+            <button class="button" onclick="function_('v')">v</button>
+            <button class="button" onclick="function_('b')">b</button>
+            <button class="button" onclick="function_('n')">n</button>
+            <button class="button" onclick="function_('m')">m</button>
+            <button class="button" onclick="function_(',')">,<</button>
+            <button class="button" onclick="function_('.')">.></button>
+            <button class="button" onclick="function_('/')">/?</button>
+            <button class="button" onclick="shift_()" id="shift">SHIFT</button>
+        </div>
+        <div class="row">
+            <button class="button space" id="space" onclick="function_(' ')"><pre>SPACE BAR</pre></button>
+        </div>
+    </div>
+
+    <script>
+        let capenabled = false;
+        let shiftEnabled = false;
+
+        function function_(letter) {
+    let output = document.getElementById("output");
+
+    if (shiftEnabled) {
+        const symbols = {
+            '`': '~', '1': '!', '2': '@', '3': '#', '4': '$', '5': '%', '6': '^', '7': '&', '8': '*', '9': '(', '0': ')',
+            '-': '_', '=': '+', '[': '{', ']': '}', '\\': '|', ';': ':', "'": '"', ',': '<', '.': '>', '/': '?'
+        };
+
+        if (letter in symbols) {
+            letter = symbols[letter];
+        } else if (/[a-z]/.test(letter)) {
+            letter = letter.toUpperCase();
+        }
+        
+        shiftEnabled = false; // Reset shift state after typing a shifted character
+    }
+
+    output.value += letter;
+}
+
+        function delete_() {
+            let output = document.getElementById("output");
+            let current_value = output.value;
+            let new_value = current_value.slice(0, -1);
+            output.value = new_value;
+        }
+
+        function caps_() {
+            capenabled = !capenabled;
+            var capsLockButton = document.querySelector(".keyboard button#cap");
+
+            if (capenabled) {
+                capsLockButton.style.backgroundColor = "#58595c3a";
+            } else {
+                capsLockButton.style.backgroundColor = "black";
+            }
+        }
+
+        function handleEnterKey() {
+            const output = document.getElementById('output');
+            const currentCursorPosition = output.selectionStart;
+            const currentValue = output.value;
+            const newValue = currentValue.slice(0, currentCursorPosition) + '\n' + currentValue.slice(currentCursorPosition);
+            output.value = newValue;
+            output.selectionStart = output.selectionEnd = currentCursorPosition + 1;
+        }
+
+        function shift_() {
+            shiftEnabled = !shiftEnabled;
+            var shiftButton = document.querySelector(".keyboard button#shift");
+
+            if (shiftEnabled) {
+                shiftButton.style.backgroundColor = "#58595c3a";
+                setTimeout(function() {
+                    shiftButton.style.backgroundColor = "black";
+                }, 1400);
+            } else {
+                shiftButton.style.backgroundColor = "black";
+            }
+}
+
+    </script>
+</body>
+</html>
